@@ -1,0 +1,31 @@
+﻿body {
+    background-color:   #E0FFFF;
+}
+
+.error{
+font-size:70%;
+color:red;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th {
+  text-align: center;
+}
+
+.wait{
+    width:120px;
+    height:120px;
+    border:1px solid black;
+    position:absolute;
+    top:50%;left:50%;
+    padding:2px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}

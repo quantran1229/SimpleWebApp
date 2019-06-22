@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Index</title>
+    <script language="JavaScript" type="text/JavaScript" src="../Scripts/jquery.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="../Scripts/main.js"></script>
+    <link rel="stylesheet" href="../Resources/style.css">
+</head>
+<body onload="load_session_storage()">
+       <div class="wait" style="display:none;"><img src='../Resources/giphy.gif' width="120" height="120" /></div>
+       <input type="text" placeholder="Searching.." id="search_box">
+       <button onclick="search()">Search</button>
+       <table>
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+            </tbody>
+        </table>
+        <p id="page_numbers"></p>
+        <button onclick="logout()">Log Out</button>
+</body>
+</html>

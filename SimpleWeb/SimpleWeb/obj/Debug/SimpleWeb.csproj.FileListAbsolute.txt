@@ -1,0 +1,15 @@
+/home/quan1229/Projects/SimpleWeb/SimpleWeb/bin/SimpleWeb.dll
+/home/quan1229/Projects/SimpleWeb/SimpleWeb/bin/SimpleWeb.pdb
+/home/quan1229/Projects/SimpleWeb/SimpleWeb/bin/Newtonsoft.Json.dll
+/home/quan1229/Projects/SimpleWeb/SimpleWeb/bin/System.Net.Http.Formatting.dll
+/home/quan1229/Projects/SimpleWeb/SimpleWeb/bin/System.Web.Http.dll
+/home/quan1229/Projects/SimpleWeb/SimpleWeb/bin/System.Web.Http.WebHost.dll
+/home/quan1229/Projects/SimpleWeb/SimpleWeb/bin/Newtonsoft.Json.xml
+/home/quan1229/Projects/SimpleWeb/SimpleWeb/bin/System.Net.Http.Formatting.xml
+/home/quan1229/Projects/SimpleWeb/SimpleWeb/bin/System.Web.Http.xml
+/home/quan1229/Projects/SimpleWeb/SimpleWeb/bin/System.Web.Http.WebHost.xml
+/home/quan1229/Projects/SimpleWeb/SimpleWeb/obj/Debug/SimpleWeb.csprojAssemblyReference.cache
+/home/quan1229/Projects/SimpleWeb/SimpleWeb/obj/Debug/SimpleWeb.csproj.CoreCompileInputs.cache
+/home/quan1229/Projects/SimpleWeb/SimpleWeb/obj/Debug/SimpleWeb.csproj.CopyComplete
+/home/quan1229/Projects/SimpleWeb/SimpleWeb/obj/Debug/SimpleWeb.dll
+/home/quan1229/Projects/SimpleWeb/SimpleWeb/obj/Debug/SimpleWeb.pdb

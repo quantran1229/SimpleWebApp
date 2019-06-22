@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Log In</title>
+    <script language="JavaScript" type="text/JavaScript" src="../Scripts/jquery.js"></script>
+    <link rel="stylesheet" href="../Resources/style.css">
+</head>
+<body>
+    <div class="wait" style="display:none;"><img src='../Resources/giphy.gif' width="120" height="120" /></div>
+    <h1>LOGIN TO SIMPLEWEB</h1>
+    <p>
+        Username:<input type="text" id="user"><div class="error" id="user_error"></div>
+    </p>
+    <p>
+        Password:
+        <input type="password" id="pwd"><div class="error" id="pwd_error"></div>
+    </p>
+    <p>
+        <button onclick="submit_user()">Submit</button>
+    </p>
+    <a href="/Views/signup.html">Create new account</a>
+    <script language="JavaScript" type="text/JavaScript" src="../Scripts/login.js"></script>
+</body>
+</html>

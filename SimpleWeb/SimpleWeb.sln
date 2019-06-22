@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleWeb", "SimpleWeb\SimpleWeb.csproj", "{859E8D13-BE94-48BD-924D-D6E59C6D9FDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleWeb.Tests", "SimpleWeb.Tests\SimpleWeb.Tests.csproj", "{0684ED19-9A2F-43F3-A3D0-F35746D5EB90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{859E8D13-BE94-48BD-924D-D6E59C6D9FDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{859E8D13-BE94-48BD-924D-D6E59C6D9FDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{859E8D13-BE94-48BD-924D-D6E59C6D9FDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{859E8D13-BE94-48BD-924D-D6E59C6D9FDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0684ED19-9A2F-43F3-A3D0-F35746D5EB90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0684ED19-9A2F-43F3-A3D0-F35746D5EB90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0684ED19-9A2F-43F3-A3D0-F35746D5EB90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0684ED19-9A2F-43F3-A3D0-F35746D5EB90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
