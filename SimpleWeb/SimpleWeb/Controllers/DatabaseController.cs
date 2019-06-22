@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Web;
 using Mono.Data.Sqlite;
 using SimpleWeb.Models;
 
@@ -141,10 +142,10 @@ namespace SimpleWeb.Controllers
                             break;
                         //create entry base on reader and add it into array
                         User entry = new User();
-                        entry.username = reader["username"].ToString();
-                        entry.firstname = reader["firstname"].ToString();
-                        entry.lastname = reader["lastname"].ToString();
-                        entry.email = reader["email"].ToString();
+                        entry.username = HttpUtility.HtmlEncode(reader["username"].ToString());
+                        entry.firstname = HttpUtility.HtmlEncode(reader["firstname"].ToString());
+                        entry.lastname = HttpUtility.HtmlEncode(reader["lastname"].ToString());
+                        entry.email = HttpUtility.HtmlEncode(reader["email"].ToString());
                         listAccounts.Add(entry);
                     }
                     reader.Close();
@@ -201,10 +202,10 @@ namespace SimpleWeb.Controllers
                             break;
                         //create a new entry base on reader and add it into list
                         User entry = new User();
-                        entry.username = (reader["username"]).ToString();
-                        entry.firstname = (reader["firstname"]).ToString();
-                        entry.lastname = (reader["lastname"]).ToString();
-                        entry.email = (reader["email"]).ToString();
+                        entry.username = HttpUtility.HtmlEncode((reader["username"]).ToString());
+                        entry.firstname = HttpUtility.HtmlEncode((reader["firstname"]).ToString());
+                        entry.lastname = HttpUtility.HtmlEncode((reader["lastname"]).ToString());
+                        entry.email = HttpUtility.HtmlEncode((reader["email"]).ToString());
 
                         listAccounts.Add(entry);
                     }
