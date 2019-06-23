@@ -1,6 +1,7 @@
 # SimpleWebApp
 A Simple Web Application for creating user and login structure.
 This program was created by MonoDevelop IDE https://www.monodevelop.com/ in Linux. This web application using asp.net framework and using Mono.Data.Sqlite database. Because of this, right now this program can only run on MonoDevelop IDE.
+To run web app on windows, please go to https://github.com/quantran1229/SimpleWebWindow.
 
 Main Function:
 #1. Create an account. The account will have a unique name. SimpleWeb will check if username is exist in database or not.
