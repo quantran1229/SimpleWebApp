@@ -1,4 +1,4 @@
-﻿//front end logic check
+//front end logic check
 function front_end_check()
 {
     var result = true;
@@ -21,9 +21,14 @@ function front_end_check()
     return result;
 }
 
+$("#user").keyup(function () {
+    user.value = trim_lower(user.value);
+});
+
 //submit POST function, if correct then redirect
 function submit_user()
 {
+    fix_name();
     if (front_end_check())
     {
         var data = {"username":user.value,
@@ -50,6 +55,10 @@ function submit_user()
     }
 }
 
+function fix_name() {
+    user.value = trim_lower(user.value);
+}
+
  $(document).ajaxStart(function(){
   $(".wait").css("display", "block");
 });
@@ -57,3 +66,13 @@ function submit_user()
 $(document).ajaxComplete(function(){
   $(".wait").css("display", "none");
 });
+
+document.onkeyup = function (e) {
+    var e = e || window.event;
+    if (e.keyCode === 13) submit_user();
+}
+
+function trim_lower(text) {
+    text = text.replace(/\s/g, "");
+    return text.toLowerCase();
+}
