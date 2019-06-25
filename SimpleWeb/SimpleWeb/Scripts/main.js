@@ -1,4 +1,4 @@
-﻿//call at the start to check if user is login or not
+//call at the start to check if user is login or not
 function load_session_storage()
 {
     var data = sessionStorage.getItem("simplewebauthorized");
@@ -92,3 +92,9 @@ function get_page_info(url,page)
 $(document).ajaxComplete(function(){
   $(".wait").css("display", "none");
 });
+
+document.onkeyup = function (e) {
+    var e = e || window.event;
+    if (e.keyCode === 13) search();
+}
+
