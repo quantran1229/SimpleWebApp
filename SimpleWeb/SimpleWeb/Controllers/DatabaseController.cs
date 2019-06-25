@@ -130,16 +130,11 @@ namespace SimpleWeb.Controllers
                 using (SqliteConnection db_con = new SqliteConnection("Data Source=" + db_name + ";Version=3;"))
                 {
                     db_con.Open();
-                    SqliteCommand command = new SqliteCommand("SELECT username,firstname,lastname,email FROM Users", db_con);
+                    SqliteCommand command = new SqliteCommand("SELECT username,firstname,lastname,email FROM Users LIMIT @skip,10", db_con);
+                    command.Parameters.Add(new SqliteParameter("skip", (page-1) * 10));
                     SqliteDataReader reader = command.ExecuteReader();
-                    int i = -1;
                     while (reader.Read())
                     {
-                        i++;
-                        if (i < (page - 1) * 10)
-                            continue;
-                        if (i >= (page * 10) - 1)
-                            break;
                         //create entry base on reader and add it into array
                         User entry = new User();
                         entry.username = HttpUtility.HtmlEncode(reader["username"].ToString());
@@ -189,17 +184,12 @@ namespace SimpleWeb.Controllers
                 using (SqliteConnection db_con = new SqliteConnection("Data Source=" + db_name + ";Version=3;"))
                 {
                     db_con.Open();
-                    SqliteCommand command = new SqliteCommand("SELECT username,firstname,lastname,email FROM Users WHERE (LOWER(username) LIKE @key) OR (LOWER(firstname) LIKE @key) OR (LOWER(lastname) LIKE @key) OR (LOWER(email) LIKE @key)", db_con);
+                    SqliteCommand command = new SqliteCommand("SELECT username,firstname,lastname,email FROM Users WHERE (LOWER(username) LIKE @key) OR (LOWER(firstname) LIKE @key) OR (LOWER(lastname) LIKE @key) OR (LOWER(email) LIKE @key) LIMIT @skip,10", db_con);
                     command.Parameters.Add(new SqliteParameter("key", '%' + keyword.ToLower() + '%'));
+                    command.Parameters.Add(new SqliteParameter("skip", (page - 1) * 10));
                     SqliteDataReader reader = command.ExecuteReader();
-                    int i = -1;
                     while (reader.Read())
                     {
-                        i++;
-                        if (i < (page - 1) * 10)
-                            continue;
-                        if (i >= (page * 10) - 1)
-                            break;
                         //create a new entry base on reader and add it into list
                         User entry = new User();
                         entry.username = HttpUtility.HtmlEncode((reader["username"]).ToString());
