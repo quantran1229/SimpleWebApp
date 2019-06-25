@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -9,7 +9,7 @@
 <body>
     <div class="wait" style="display:none;"><img src='../Resources/giphy.gif' width="120" height="120" /></div>
     <p>
-        Username:<input type="text" id="user"><div class="error" id="user_error"></div>
+        Username:<input type="text" id="user" onchange="fix_name()"><div class="error" id="user_error"></div>
     </p>
     <p>
         Password:<input type="password" id="pwd"><div class="error" id="pwd_error"></div>
@@ -24,7 +24,7 @@
         Last name:<input type="text" id="lname">
     </p>
     <p>
-        Email:<input type="text" id="email"><div class="error" id="email_error"></div>
+        Email:<input type="text" id="email" onchange="fix_email()"><div class="error" id="email_error"></div>
     </p>
     <button onclick="submit_new_entry()">Submit</button>
     <button onclick="location.replace('/Views/login.html');">Back</button>
