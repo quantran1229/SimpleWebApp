@@ -1,6 +1,8 @@
-﻿//front end checking
+//front end checking
 function front_end_check()
 {
+    fix_email();
+    fix_name();
     var result = true;
     if (user.value == "")
     {
@@ -9,7 +11,12 @@ function front_end_check()
     }
     if (user_error.innerHTML != "")
         result = false;
-        
+
+    if (pwd.value == "") {
+        alert("You need to enter a password");
+        result = false;
+    }
+
     if (pwd_error.innerHTML != "")
     {
         pwd_error.innerHTML = "Your password is empty";
@@ -57,8 +64,17 @@ function submit_new_entry()
     }
 }
 
+function fix_name() {
+    user.value = trim_lower(user.value);
+}
+
+function fix_email() {
+    email.value = trim_lower(email.value);
+}
+
 //check if username is exist in database or not
-$("#user").keyup(function(){
+$("#user").keyup(function () {
+    fix_name();
     $.get("/users/check/"+user.value, function(data){
                 if (data == "0")
                 {
@@ -83,10 +99,35 @@ $("#re_pwd").change(function(){
     }
 });
 
+$("#pwd").change(function () {
+    if (re_pwd.value != "") {
+        if (re_pwd.value != pwd.value) {
+            re_error.innerHTML = "Your second password is different from first one";
+        }
+        else {
+            re_error.innerHTML = "";
+        }
+    }
+});
+
 $(document).ajaxStart(function(){
   $(".wait").css("display", "block");
 });
 
 $(document).ajaxComplete(function(){
   $(".wait").css("display", "none");
+});
+
+function trim_lower(text) {
+    text = text.replace(/\s/g, "");
+    return text.toLowerCase();
+}
+
+document.onkeyup = function (e) {
+    var e = e || window.event;
+    if (e.keyCode === 13) submit_new_entry();
+}
+
+$("#email").keyup(function () {
+    fix_email();
 });
